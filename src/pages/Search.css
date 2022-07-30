@@ -1,0 +1,21 @@
+.search__input {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border: 1px solid lightgray;
+    padding: 10px 20px;
+    border-radius: 999px;
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 560px;
+}
+
+.search__input > input:focus {
+    outline-width: 0;
+    outline: none;
+}
+
+.search__inputIcon {
+    color: gray;
+}
