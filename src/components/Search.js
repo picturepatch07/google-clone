@@ -13,7 +13,7 @@ function Search() {
             <MicIcon />
         </div>
 
-        <div className='search__button'>
+        <div className='search__buttons'>
             <Button variant='outlined' type='Submit'>Google Search</Button>
             <Button variant='outlined'>I'm Feeling Lucky</Button>
         </div>
