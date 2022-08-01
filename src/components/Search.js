@@ -19,10 +19,10 @@ function Search({hideButtons = false}) {
     };
 
   return (
-    <div className='search'>
+    <form className='search'>
         <div className='search__input'>
             <SearchIcon className='search__inputIcon' />
-            <input />
+            <input value={input} onChange={e => setInput(e.target.value)} />
             <MicIcon />
         </div>
 
@@ -55,7 +55,7 @@ function Search({hideButtons = false}) {
             </Button>
         </div>
         )}
-    </div>
+    </form>
   )
 }
 
