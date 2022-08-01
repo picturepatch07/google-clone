@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../pages/Search.css';
 import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from '@mui/icons-material/Mic';
 import { Button } from '@mui/material';
+import { useHistory } from 'react-router-dom';
 
-function Search() {
+function Search({hideButtons = false}) {
+
+    const [input, setInput] = useState("");
+
+    const history = useHistory();
+
+    const search = (e) => {
+        e.preventDefault();
+        console.log("search!!")
+
+        history.push("/search")
+    };
+
   return (
     <div className='search'>
         <div className='search__input'>
@@ -13,10 +26,35 @@ function Search() {
             <MicIcon />
         </div>
 
-        <div className='search__buttons'>
-            <Button variant='outlined' type='Submit'>Google Search</Button>
-            <Button variant='outlined'>I'm Feeling Lucky</Button>
+        {!hideButtons ? (
+            <div className='search__buttons'>
+                <Button 
+                onClick={search}
+                variant='outlined'
+                type='submit'>
+                    Google Search
+                </Button>
+                <Button
+                variant='outlined'>
+                    I'm Feeling Lucky
+                </Button>
+            </div>
+        ) : (
+            <div className='search__buttons'>
+            <Button 
+            className='search__buttonsHidden'
+            onClick={search} 
+            variant='outlined' 
+            type='Submit'>
+                Google Search
+            </Button>
+            <Button
+            className='search__buttonsHidden' 
+            variant='outlined'>
+                I'm Feeling Lucky
+            </Button>
         </div>
+        )}
     </div>
   )
 }
