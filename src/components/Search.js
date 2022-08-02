@@ -5,7 +5,7 @@ import MicIcon from '@mui/icons-material/Mic';
 import { Button } from '@mui/material';
 import { useHistory } from 'react-router-dom';
 
-function Search({hideButtons = false}) {
+function Search ({hideButtons = false}) {
 
     const [input, setInput] = useState("");
 
@@ -53,7 +53,7 @@ function Search({hideButtons = false}) {
             variant='outlined'>
                 I'm Feeling Lucky
             </Button>
-        </div>
+            </div>
         )}
     </form>
   )
