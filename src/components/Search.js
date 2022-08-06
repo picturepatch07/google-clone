@@ -8,8 +8,8 @@ import { useHistory } from 'react-router-dom';
 function Search ({hideButtons = false}) {
 
     const [input, setInput] = useState("");
-
     const history = useHistory();
+
 
     const search = (e) => {
         e.preventDefault();
