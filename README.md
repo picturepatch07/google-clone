@@ -5,3 +5,10 @@
 # Google Clone with React.js
 
 It is the clone of the google where you can search for anything and it will show the exactly same result.
+
+## Features
+
+-Realtime and Accurate Google Search
+-Full Screen mode
+-Full Responsive
+-Search any query
