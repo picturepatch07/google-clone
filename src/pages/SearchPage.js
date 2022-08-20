@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './SearchPage.css';
+import { useStateValue } from '../StateProvider';
 
 function SearchPage() {
   const [{ term }, dispatch] = useStateValue();
@@ -11,6 +12,6 @@ function SearchPage() {
         <div className='searchPage__results'></div>
     </div>
   )
-}
+} 
 
 export default SearchPage

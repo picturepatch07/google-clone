@@ -4,14 +4,15 @@ import SearchIcon from '@mui/icons-material/Search';
 import MicIcon from '@mui/icons-material/Mic';
 import { Button } from '@mui/material';
 import { useHistory } from 'react-router-dom';
-import { useStateValue } from './StateProvider';
-import { actionTypes } from '../pages/reducer';
+import { useStateValue } from '../StateProvider';
+import { actionTypes } from '../reducer';
 
 function Search ({hideButtons = false}) {
 
+    // eslint-disable-next-line
     const [{}, dispatch] = useStateValue();
-    const [term, setTerm] = useState("");
     const history = useHistory();
+    const [term, setTerm] = useState("");
 
 
     const search = (e) => {
@@ -22,7 +23,7 @@ function Search ({hideButtons = false}) {
             type: actionTypes.SET_SEARCH_TERM,
             term: term,
         });
-        
+
         history.push("/search")
     };
 
@@ -30,7 +31,7 @@ function Search ({hideButtons = false}) {
     <form className='search'>
         <div className='search__input'>
             <SearchIcon className='search__inputIcon' />
-            <input value={input} onChange={e => setInput(e.target.value)} />
+            <input value={term} onChange={e => setTerm(e.target.value)} />
             <MicIcon />
         </div>
 
