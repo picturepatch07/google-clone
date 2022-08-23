@@ -34,3 +34,32 @@
     text-decoration: none;
     color: gray;
 }
+
+.searchPage__optionsRight,
+.searchPage__optionsLeft {
+    display: flex;
+}
+
+.searchPage__optionsRight {
+    margin-left: 80px;
+}
+
+.searchPage__resultLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.searchPage__option {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.searchPage__option a {
+    margin-left: 5px;
+}
